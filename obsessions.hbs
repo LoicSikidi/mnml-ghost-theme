@@ -1,0 +1,63 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{>content-header}}
+
+{{#get "tags" filter="visibility:public" include="count.posts" as |tags pages|}}
+<header class="main-header tag-head inner">
+  <h1 class="page-title typl8-beta ">Mes obsessions</h1>
+  <br>
+  <em>L'imaginaire collectif renvoie dos-à-dos <strong>passion</strong> et <strong>obsession</strong>. La première serait louable alors que la seconde serait maladive. J'ai décidé que mon blog ferait un pied de nez à cette idée reçue.<br>
+Dans cet espace, l' « obsession » sera une force intérieure dirigée vers un seul objet: le savoir. Une quête visant à approfondir les sujets que je ne maitrise pas ou qui me sont encore inconnus.</em>
+</header>
+
+{{! The main content area on the homepage }}
+<main class="content">
+{{#foreach tags}}
+  <article class="post">
+    <header class="post-header">
+      <h2 class="post-title typl8-gamma">
+         <a href="{{url}}">{{{name}}}</a>
+      </h2>
+    </header>
+    {{#if feature_image}}
+    <div class="post-thumbnail" id="{{url}}-post-thumbnail">
+      <script type="text/javascript">
+      var mq = window.matchMedia( "(min-width: 500px)" );
+      if (mq.matches){
+        var thumbnailContainer = document.getElementById('{{url}}-post-thumbnail')
+
+        if (!String.prototype.contains) {
+          String.prototype.contains = function(s) {
+            return this.indexOf(s) > -1;
+          }
+        }
+
+        function homepagePostThumbnail (imgUrl) {
+            thumbnailContainer.innerHTML = '<img src="'+imgUrl+'" style="max-height: 160px;" alt="{{title}}" />';
+        };
+        homepagePostThumbnail("{{feature_image}}");
+      } //end mediaquery if
+      </script>
+    </div>
+    {{/if}}
+    <div class="post-excerpt">
+        <p>{{description}}</p>
+    </div>
+    <footer class="post-meta">
+        <p>Derniers posts:</p>
+        <ul>
+           {{#get "posts" filter="primary_tag:{{slug}}" limit="3"}}
+              {{! Iterate of each post - partials/minimal-loop.hbs }}
+              {{> "minimal-loop"}}
+           {{/get}}
+        </ul>
+    </footer>
+  </article>
+{{/foreach}}
+</main>
+{{/get}}
+<script>
+  var bodyTag = document.getElementsByTagName("body")[0];
+  bodyTag.className += ' tag-template';
+</script>

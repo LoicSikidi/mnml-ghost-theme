@@ -1018,6 +1018,10 @@ nav button {
   text-decoration: underline;
 }
 
+footer.post-meta ul {
+  list-style-type: none;
+}
+
 .user-meta {
   position: relative;
   padding: 0.3rem 40px 0 100px;
