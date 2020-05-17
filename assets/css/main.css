@@ -185,12 +185,13 @@ strong, bold, b{
    Comment this block out if you want your paragraphs marked by space rather
    than indent. */
 
-
+/*
 .post-content > p + p,
 .post-content .thumb + p,
 .post-content aside + p{
   text-indent:1.65em;
 }
+*/
 
 .post-content p{
   margin-bottom:0em;
