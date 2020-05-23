@@ -203,6 +203,11 @@ article .admonition {
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, .05), 0 0 0.05rem rgba(0, 0, 0, .1);
 }
 
+article .admonition p:not(.admonition-title) {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
 article .info>.admonition-title {
   background-color: rgba(0, 184, 212, .1);
 }
@@ -215,7 +220,6 @@ article .tip>.admonition-title {
     background-color: rgba(0,191,165,.1);
 }
 
-
 article .admonition-title {
   position: relative;
   margin: 0 -0.6rem;
@@ -224,8 +228,12 @@ article .admonition-title {
   background-color: rgba(68, 138, 255, .1);
 }
 
-article .admonition-title i {
+article .admonition-title svg {
   padding-right: .5rem;
+}
+
+article .admonition>:last-child {
+  margin-bottom: .6rem;
 }
 
 /* END */
