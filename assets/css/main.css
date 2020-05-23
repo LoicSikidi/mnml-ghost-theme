@@ -178,6 +178,59 @@ strong, bold, b{
   font-weight: 700;
 }
 
+/* ================= Admonition added by @LSI  ======================*/
+/* START */
+article .admonition.info {
+  border-color: #00b8d4;
+}
+
+article .admonition.warning {
+    border-color: #ff9100;
+}
+
+article .admonition.tip {
+    border-color: #00bfa5;
+}
+
+article .admonition {
+  margin: 1.5625em 0;
+  padding: 0 .6rem;
+  overflow: hidden;
+  font-size: .64rem;
+  page-break-inside: avoid;
+  border-left: .2rem solid #448aff;
+  border-radius: .1rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, .05), 0 0 0.05rem rgba(0, 0, 0, .1);
+}
+
+article .info>.admonition-title {
+  background-color: rgba(0, 184, 212, .1);
+}
+
+article .warning>.admonition-title {
+    background-color: rgba(255,145,0,.1);
+}
+
+article .tip>.admonition-title {
+    background-color: rgba(0,191,165,.1);
+}
+
+
+article .admonition-title {
+  position: relative;
+  margin: 0 -0.6rem;
+  padding: .4rem .6rem .4rem .5rem;
+  font-weight: 700;
+  background-color: rgba(68, 138, 255, .1);
+}
+
+article .admonition-title i {
+  padding-right: .5rem;
+}
+
+/* END */
+/* ================= */
+
 /* ================= TRADITIONAL PARAGRAPHING ======================*/
 
 /* These styles set up book style paragraphing, and make the spacing work.
