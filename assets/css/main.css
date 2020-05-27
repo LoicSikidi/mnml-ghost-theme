@@ -196,7 +196,7 @@ article .admonition {
   margin: 1.5625em 0;
   padding: 0 .6rem;
   overflow: hidden;
-  font-size: .64rem;
+  font-size: 13px;
   page-break-inside: avoid;
   border-left: .2rem solid #448aff;
   border-radius: .1rem;
@@ -278,9 +278,9 @@ article .admonition>:last-child {
 
 /* END OF TRADITIONAL PARAGRAPH STYLES*/
 
-
+** updated by @LSI */
 ol, ul {
-  padding-left: 0;
+  padding-left: 1em;
 }
 
 /*
