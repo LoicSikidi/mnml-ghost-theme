@@ -776,6 +776,10 @@ aside.note:before{
   margin-right:1.5rem;
 }
 
+.home-template {
+  padding: 0% 5%;
+}
+
 .home-template .main-header--content,
 .paged .main-header--content{
   padding-left: 0;
@@ -996,7 +1000,7 @@ nav button {
 }
 
 .home-header p {
-  margin: auto auto 0.65em;
+  margin: auto auto 1em;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -1050,7 +1054,6 @@ nav button {
   float:left;
   max-width:250px;
   margin-right: 1.65rem;
-  margin-bottom: 1.65rem;
 }
 
 .post-thumbnail img{
